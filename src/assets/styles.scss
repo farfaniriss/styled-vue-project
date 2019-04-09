@@ -92,16 +92,49 @@ $disabled-button-color: #a4a4a4;
     }
 }
 
-@media (min-width: 500px) {
+@media only screen and (max-width: 500px) {
     .nav-tabs {
-        display: none;
+        display: none !important;
     }
 
     .link-toggle {
+        display: flex !important;
         margin-left: 95%;
         align-self: center;
         position: absolute;
         cursor: pointer;
+    }
+
+    .toggle-show {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        position: absolute;
+        margin-top: 45px !important;
+        width: 100% !important;
+        float: right !important;
+        border: none !important;
+        border-bottom: 1.4px solid #A8ADB5 !important;
+    }
+
+    a {
+        display: block;
+        background-color: #F2F2F2;
+        border: none !important;
+
+        &:visited {
+            color: #000000;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .router-link-exact-active {
+        color: #495057;
+        font-weight: bold;
+        background-color: #F2F2F2 !important;
+        text-decoration: none !important;
     }
 }
 
